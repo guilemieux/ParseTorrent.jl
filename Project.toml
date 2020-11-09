@@ -1,0 +1,7 @@
+name = "ParseTorrent"
+uuid = "cf211afc-d934-43d6-b0d7-37d86d4c946b"
+authors = ["Guillaume Lemieux <guilemieux@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Bencode = "876bf914-f2cc-42e9-b859-b1b76098220c"
