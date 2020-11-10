@@ -10,7 +10,7 @@ Bytes = Vector{UInt8}
 function parsetorrent(b::Bytes)::Dict
     torrent = bdecode(b)
     infohash = sha1(bencode(torrent["info"]))
-    torrent["infohash"] = infohash
+    torrent["infohash"] = bytes2hex(infohash)
     pieces = torrent["info"]["pieces"]
     torrent["info"]["pieces"] = pieces2hashes(Vector{UInt8}(pieces))
     torrent
